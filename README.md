@@ -12,14 +12,17 @@ And Uses [Microsoft SEAL](https://github.com/microsoft/SEAL) as a Backend.
 
 ---
 
-### To Encrypt and Decrypt data first we have to generate Keys
+Object of Pyfhel is Created using
+> HE = Pyfhel()
+
 Keys are Generated using
 > HE.keyGen()
 
 ---
 
-### For Simple Example i used **x = 3** and **y = 5** in BFV Scheme
-To retrive cipher text:
+
+### For Example let **x = 3** and **y = 5** in BFV Scheme :-
+Cipher text:
 
 ```python
 cx, cy = obj.encrypt(x=[3], y=[5])
@@ -39,10 +42,10 @@ relinearization technique is used (typically right after each c-c mult) to
 reduce the size of a ciphertext back to the minimal size.
 For this, a special type of public key called Relinearization Key is used.
 
-To initialize Relinearization Key
-> relinKeyGen() function is used in Pyfhel
+Initializing Relinearization Key
+> HE.relinKeyGen() 
   
-And to relinearize a multiplication **~** sign is used like
+And to relinearize a multiplication **~** sign is used
 </p>
 </br>
 
@@ -58,7 +61,7 @@ And to relinearize a multiplication **~** sign is used like
 
 <br>
 
-and Decrption was:
+Decryption :-
 > BFV Scheme gives exact result
 ```python
 Decryption of csum (cx + cy) > [8 0 0 ... 0 0 0]
@@ -67,12 +70,13 @@ Decryption of cmul (cx * cy) > [15  0  0 ...  0  0  0]
 
 ---
 
-### Another Example with CKKS Scheme with Below Equation 
+### Example with CKKS Scheme :-
+`Equation`
 > Encrypt(3xy + x) = Encrypt(3xy) + Encrypt(x) = [3 * Encrypt(x) * Encrypt(y)] + Encrypt(x)
 
 Encryption
 ```python
-cx, cy = obj.encrypt(x=[1, 2], y=[3, 4])
+cx, cy = obj.encrypt(x=[1.0, 2.0], y=[3.0, 4.0])
 ```
 
 3xy = [3 * Encrypt(x) * Encrypt(y)]
