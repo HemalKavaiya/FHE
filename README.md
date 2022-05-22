@@ -65,6 +65,9 @@ Decryption :-
 > BFV Scheme gives exact result
 ```python
 Decryption of csum (cx + cy) > [8 0 0 ... 0 0 0]
+
+Decryption of csub (cx - cy) > [-2  0  0 ...  0  0  0]
+
 Decryption of cmul (cx * cy) > [15  0  0 ...  0  0  0]
 ```
 
