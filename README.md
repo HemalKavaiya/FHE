@@ -1,7 +1,7 @@
 # FHE
 Implementation of Encryption and Decryption in Homomorphic Encryption Algorithm.
 
-## I used [Pyfhel](https://github.com/ibarrond/Pyfhel) library in python 
+## Used [Pyfhel](https://github.com/ibarrond/Pyfhel) library in python 
 
 which includes 
 1) **BFV** Scheme which is more suited for arithmetic on integers and decrpt the exact result
