@@ -56,3 +56,9 @@ if __name__ == "__main__":
     print(f"after relinearization (cmul) {cmul}\n")
 
     obj.decrypt("cmul (cx * cy)", cmul)
+    
+    _3xy = ~(3 * cx * cy)
+    obj.decrypt("3xy", cy)
+
+    eq = _3xy + cx
+    obj.decrypt("Equation Result", eq)
