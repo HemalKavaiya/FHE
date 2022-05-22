@@ -2,20 +2,22 @@ from Pyfhel import Pyfhel
 
 class Ckks:
     def __init__(self):
-        self.HE = Pyfhel()
+        self.HE = Pyfhel()  # Pyfhel object is created
 
         ckks_params = {
-            'scheme': 'CKKS',
-            'n': 2 ** 14,
-            'scale': 2 ** 30,
-            'qi': [60, 30, 30, 30, 60]
+            'scheme': 'CKKS',  # Scheme : BFV / CKKS
+            'n': 2 ** 14,  # num. of slots per plaintext
+            'scale': 2 ** 30,  # to round the floating point number
+            'qi': [60, 30, 30, 30, 60]  # Number of bits of each prime
         }
 
         self.HE.contextGen(**ckks_params)
-        self.HE.keyGen()
+        self.HE.keyGen()  # Generate public/secret keys
         self.HE.relinKeyGen()  # generate a relin key
 
     def encrypt(self, **data):
+
+        # Encryption
         x = self.HE.encrypt(data["x"])
         y = self.HE.encrypt(data["y"])
 
@@ -26,6 +28,7 @@ class Ckks:
 
     def decrypt(self, msg, ctext):
 
+        # Decryption
         r = self.HE.decrypt(ctext)
 
         print(f"Decryption of {msg} > {r}\n")
