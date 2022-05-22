@@ -28,6 +28,8 @@ class Bfv:
         return x, y
 
     def decrypt(self, msg, ctext):
+
+        # Decryption
         r = self.HE.decrypt(ctext)
 
         print(f"Decryption of {msg} > {r}\n")
