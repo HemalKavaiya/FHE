@@ -41,6 +41,21 @@ if __name__ == "__main__":
 
     obj.decrypt("cx", cx)
     obj.decrypt("cy", cy)
+    
+    csum = cx + cy
+    cmul = cx * cy
+    csub = cx - cy
+
+    obj.decrypt("csum (cx + cy)", csum)
+    obj.decrypt("csub (cx - cy)", csub)
+
+    print(f"before relinearization (cmul) {cmul}")
+
+    ~cmul
+
+    print(f"after relinearization (cmul) {cmul}\n")
+
+    obj.decrypt("cmul (cx * cy)", cmul)
 
     _3xy = ~(3 * cx * cy)
     obj.decrypt("3xy", cy)
