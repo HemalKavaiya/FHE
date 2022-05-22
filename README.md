@@ -76,7 +76,7 @@ Decryption of cmul (cx * cy) > [15  0  0 ...  0  0  0]
 
 Encryption
 ```python
-cx, cy = obj.encrypt(x=[1.0, 2.0], y=[3.0, 4.0])
+cx, cy = obj.encrypt(x=[1.1, 2.2], y=[3.3, 4.4])
 ```
 
 3xy = [3 * Encrypt(x) * Encrypt(y)]
@@ -91,5 +91,5 @@ eq = _3xy + cx
 
 Decryption :-
 ```python
-Decryption of Equation Result > [ 1.00030353e+01  2.60080746e+01 -1.11561587e-06 ... -1.15990726e-06 1.18289616e-06 -2.16752571e-06]
+Decryption of Equation Result > [ 1.19936477e+01  3.12497888e+01  1.12081209e-06 ...  1.08117709e-05 -1.27877279e-06 -3.55203472e-06]
 ```
