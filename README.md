@@ -101,7 +101,7 @@ obj.decrypt("Equation Result", eq)
 Decryption of Equation Result > [ 1.19936477e+01  3.12497888e+01  1.12081209e-06 ...  1.08117709e-05 -1.27877279e-06 -3.55203472e-06]
 ```
 
-Ans of above equation with BFV Scheme (x = 3, y = 5) :-
+Decryption of above equation with BFV Scheme (x = 3, y = 5) :-
 ```python
 obj.decrypt("Equation Result", eq)
 Decryption of Equation Result > [48  0  0 ...  0  0  0]
