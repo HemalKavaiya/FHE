@@ -1,6 +1,0 @@
-Option 1. Cryptography
-
-I used Pyfhel library in python 
-which includes 
-1) BFV which is more suited for arithmetic on integers and decrpt the exact result
-2) CKKS which is more suited for arithmetic on real numbers and give approximate close result. 
