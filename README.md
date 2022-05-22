@@ -64,10 +64,13 @@ And to relinearize a multiplication **~** sign is used
 Decryption :-
 > BFV Scheme gives exact result
 ```python
+obj.decrypt("csum (cx + cy)", csum)
 Decryption of csum (cx + cy) > [8 0 0 ... 0 0 0]
 
+obj.decrypt("csub (cx - cy)", csub)
 Decryption of csub (cx - cy) > [-2  0  0 ...  0  0  0]
 
+obj.decrypt("cmul (cx * cy)", cmul)
 Decryption of cmul (cx * cy) > [15  0  0 ...  0  0  0]
 ```
 
@@ -94,5 +97,6 @@ eq = _3xy + cx
 
 Decryption :-
 ```python
+obj.decrypt("Equation Result", eq)
 Decryption of Equation Result > [ 1.19936477e+01  3.12497888e+01  1.12081209e-06 ...  1.08117709e-05 -1.27877279e-06 -3.55203472e-06]
 ```
