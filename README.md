@@ -4,7 +4,7 @@ Implementation of Encryption and Decryption in Homomorphic Encryption Algorithm.
 ## Used [Pyfhel](https://github.com/ibarrond/Pyfhel) library in python 
 
 which includes 
-1) **BFV** Scheme which is more suited for arithmetic on integers and decrpt the exact result
+1) **BFV** Scheme which is more suited for arithmetic on integers and decrypt the exact result
 2) **CKKS** Scheme which is more suited for arithmetic on real numbers and give approximate close result. 
 and it also provides bootstrapping for CKKS.
 
